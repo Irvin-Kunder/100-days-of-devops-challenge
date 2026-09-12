@@ -1,4 +1,4 @@
-# Day 001: Linux User Setup with Non-interactive Shell
+# Day 1: Linux User Setup with Non-interactive Shell
 
 ## Objective
 
@@ -26,7 +26,7 @@ To create a user with non-interactive shell for your organization on a server.
 3. Create non-interactive shell user.
 
     ```sh
-    useradd -s /sbin/nologin user-name
+    useradd -s sbin/nologin user-name
     ```
 
     `-s`: for shell, with path of nologin shell
@@ -42,7 +42,7 @@ To create a user with non-interactive shell for your organization on a server.
     Using login:
 
     ```sh
-    sudo su user-name
+    su user-name
     ```
 
 ## What I Learned

@@ -36,25 +36,25 @@
 
     ```sh
     yum install selinux-policy selinux-policy-targeted policycoreutils policycoreutils-python-utils
-    ```sh
+    ```
 
 5. Open the below file.
 
     ```sh
     vim /etc/selinux/config
-    ```sh
+    ```
 
     Change the value of SELINX from enforcing to disabled.
 
     ```sh
     SELINUX=disabled 
-    ```sh
+    ```
 
     Click esc and then save the file.
 
     ```sh
     :wq
-    ```sh
+    ```
 
 ## What I Learned
 

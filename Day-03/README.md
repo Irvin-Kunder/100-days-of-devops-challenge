@@ -2,7 +2,7 @@
 
 ## Objective
 
-To prevent SSH Login access on all app servers
+To prevent SSH Login access on all app servers.
 
 ## Steps
 

@@ -31,10 +31,10 @@ To grant executable permission to script file. Ensure all users can execute.
 
     ```sh
     chmod +rx <file_name>
-    ```sh
+    ```
 
-    `+r': to provide read permissions.
-    `+x': to provide write permissions.
+    `+r`: to provide read permissions.
+    `+x`: to provide write permissions.
 
 ## What I Learned
 
