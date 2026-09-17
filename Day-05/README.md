@@ -14,9 +14,9 @@
 
 1. Connect to the app server using `SSH`: Refer to User and Server Details in the lab.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 2. Once connected Switch to Root.
 
@@ -26,35 +26,35 @@
 
 3. Run the update on the server.
 
-    ```sh
-    yum update
-    ```
+   ```sh
+   yum update
+   ```
 
-    Enter `Y` to install.
+   Enter `Y` to install.
 
 4. Install the Selinux packages.
 
-    ```sh
-    yum install selinux-policy selinux-policy-targeted policycoreutils policycoreutils-python-utils
-    ```
+   ```sh
+   yum install selinux-policy selinux-policy-targeted policycoreutils policycoreutils-python-utils
+   ```
 
 5. Open the below file.
 
-    ```sh
-    vim /etc/selinux/config
-    ```
+   ```sh
+   vim /etc/selinux/config
+   ```
 
-    Change the value of SELINX from enforcing to disabled.
+   Change the value of SELINX from enforcing to disabled.
 
-    ```sh
-    SELINUX=disabled 
-    ```
+   ```sh
+   SELINUX=disabled
+   ```
 
-    Click esc and then save the file.
+   Click esc and then save the file.
 
-    ```sh
-    :wq
-    ```
+   ```sh
+   :wq
+   ```
 
 ## What I Learned
 

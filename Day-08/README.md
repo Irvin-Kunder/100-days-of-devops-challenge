@@ -8,15 +8,15 @@ Install ansible version 4.8.0 on Jump host using pip3 only. Make sure Ansible bi
 
 1. Connect to the jump server using `SSH`: Refer to User and Server Details in the lab.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 2. Install ansible.
 
-    ```sh
-    sudo pip3 install ansible==4.8.0
-    ```
+   ```sh
+   sudo pip3 install ansible==4.8.0
+   ```
 
 ## What I Learned
 

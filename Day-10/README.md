@@ -26,34 +26,33 @@ The script must be located at:
 
 1. Connect to the app 2 using `SSH`: Refer to User and Server Details in the lab.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 2. Create the Bash Script.
 
-    ```sh
-    vi /scripts/media_archive.sh
-    ```
+   ```sh
+   vi /scripts/media_archive.sh
+   ```
 
-Script:
+   Script:
 
-```bash
-#!/bin/bash
+   ```bash
+   #!/bin/bash
 
-SOURCE="/var/www/html/media"
-ARCHIVE="/archives/xfusioncorp_media.zip"
-REMOTE_USER="<storage-user>"
-REMOTE_HOST="<storage-server>"
-REMOTE_PATH="/archives/xfusioncorp_media.zip"
+   SOURCE="/var/www/html/media"
+   ARCHIVE="/archives/xfusioncorp_media.zip"
+   REMOTE_USER="<storage-user>"
+   REMOTE_HOST="<storage-server>"
+   REMOTE_PATH="/archives/xfusioncorp_media.zip"
 
-zip -r "$ARCHIVE" "$SOURCE"
+   zip -r "$ARCHIVE" "$SOURCE"
 
-scp "$ARCHIVE" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}"
-```
+   scp "$ARCHIVE" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}"
+   ```
 
-> Replace `<storage-user>` and `<storage-server>` with the actual values provided by the lab.
-
+   > Replace `<storage-user>` and `<storage-server>` with the actual values provided by the lab.
 
 3. Install Zip.
 
@@ -61,60 +60,59 @@ scp "$ARCHIVE" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}"
    sudo yum install zip -y
    ```
 
-```bash
-zip -v
-```
+   ```bash
+   zip -v
+   ```
 
 4. Generate an SSH key
 
-```bash
-ssh-keygen -t rsa -b 2048
-```
+   ```bash
+   ssh-keygen -t rsa -b 2048
+   ```
 
-Copy the public key to the storage server:
+   Copy the public key to the storage server:
 
-```bash
-ssh-copy-id <storage-user>@<storage-server>
-```
-
+   ```bash
+   ssh-copy-id <storage-user>@<storage-server>
+   ```
 
 5. Make the Script Executable
 
-```bash
-chmod +x /scripts/media_archive.sh
-```
+   ```bash
+   chmod +x /scripts/media_archive.sh
+   ```
 
-Verify:
+   Verify:
 
-```bash
-ls -l /scripts/media_archive.sh
-```
+   ```bash
+   ls -l /scripts/media_archive.sh
+   ```
 
 6. Execute the Script
 
-Run the script using the appropriate server user:
+   Run the script using the appropriate server user:
 
-```bash
-/scripts/media_archive.sh
-```
+   ```bash
+   /scripts/media_archive.sh
+   ```
 
-```bash
-ls -lh /archives/xfusioncorp_media.zip
-```
+   ```bash
+   ls -lh /archives/xfusioncorp_media.zip
+   ```
 
-7. ## Verification
+7. Verification
 
-Check that the archive was created on App Server 2:
+   Check that the archive was created on App Server 2:
 
-```bash
-ls -lh /archives/xfusioncorp_media.zip
-```
+   ```bash
+   ls -lh /archives/xfusioncorp_media.zip
+   ```
 
-Verify the archive on the Nautilus Storage Server:
+   Verify the archive on the Nautilus Storage Server:
 
-```bash
-ssh <storage-user>@<storage-server> "ls -lh /archives/xfusioncorp_media.zip"
-```
+   ```bash
+   ssh <storage-user>@<storage-server> "ls -lh /archives/xfusioncorp_media.zip"
+   ```
 
 ## What I Learned
 

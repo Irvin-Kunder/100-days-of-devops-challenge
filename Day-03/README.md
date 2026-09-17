@@ -8,9 +8,9 @@ To prevent SSH Login access on all app servers.
 
 1. Connect to the app server using `SSH`: Refer to User and Server Details in the lab.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 2. Once connected Switch to Root.
 
@@ -20,12 +20,12 @@ To prevent SSH Login access on all app servers.
 
 3. Edit the sshd_config file and change the value of PermitRootLogin to No.
 
-    ```sh
-    vim /etc/ssh/ssh_config
-    ```
+   ```sh
+   vim /etc/ssh/ssh_config
+   ```
 
-    `:?`: for search, PermitRootLogin within the file.
-    `:wq`: save and quit the file.
+   `:?`: for search, PermitRootLogin within the file.
+   `:wq`: save and quit the file.
 
 ## What I Learned
 

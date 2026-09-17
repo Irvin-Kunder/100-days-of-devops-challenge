@@ -44,21 +44,21 @@ Troubleshot and resolve why MariaDB is down.
 6. Provided right user permissions to the file.
 
    First checked directory permission
-   
+
    ```sh
    sudo ls -ld /run/mariadb
    ```
 
    Output:
-   
+
    ```sh
    drwxr-xr-x 2 root mysql 40 Sep 14 09:29 /run/MariaDB
    ```
-   
+
    Since MariaDB runs under the mysql user, this ownership prevented MariaDB from creating its PID file.
 
    Change Owner from root to MySQL.
-   
+
    ```sh
    sudo chown mysql:mysql /run/MariaDB
    ```
@@ -68,9 +68,9 @@ Troubleshot and resolve why MariaDB is down.
    ```sh
    sudo systemctl restart MariaDB
    ```
-   
+
    Then verify the MariaDB Status.
-   
+
    ```sh
    sudo systemctl status MariaDB
    ```

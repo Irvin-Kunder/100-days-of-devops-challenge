@@ -8,34 +8,34 @@ Set up passwordless authentication from user `thor` on the jump host to all app 
 
 1. Connect to the jump server using `SSH`: Refer to User and Server Details in the lab.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 2. Generate a public and private SSH key pair.
 
-    ```sh
-    ssh-keygen -t rsa -b 2048
-    ```
+   ```sh
+   ssh-keygen -t rsa -b 2048
+   ```
 
-    Press `Enter` to accept the default file location and follow the prompts.
+   Press `Enter` to accept the default file location and follow the prompts.
 
-    Copy the public key.
+   Copy the public key.
 
 3. Log in to all app servers using the SSH command from Step 1. Then create the `.ssh` directory and `authorized_keys` file.
 
-    ```sh
-    mkdir -p ~/.ssh
-    vi ~/.ssh/authorized_keys
-    ```
+   ```sh
+   mkdir -p ~/.ssh
+   vi ~/.ssh/authorized_keys
+   ```
 
-    Paste the public key into `authorized_keys` and save the file.
+   Paste the public key into `authorized_keys` and save the file.
 
 4. Test the passwordless SSH connection from the jump server.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 ## What I Learned
 

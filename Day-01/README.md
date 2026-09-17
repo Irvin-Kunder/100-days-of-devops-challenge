@@ -2,7 +2,7 @@
 
 ## Objective
 
-To create a user with non-interactive shell for your organization on a server. 
+To create a user with non-interactive shell for your organization on a server.
 
 ## Technologies Used
 
@@ -13,9 +13,9 @@ To create a user with non-interactive shell for your organization on a server.
 
 1. Connect to the the app server using `SSH`: Refer to User and Server Details in the lab.
 
-    ```sh
-    ssh user@server-name
-    ```
+   ```sh
+   ssh user@server-name
+   ```
 
 2. Once connected Switch to Root.
 
@@ -25,25 +25,25 @@ To create a user with non-interactive shell for your organization on a server.
 
 3. Create non-interactive shell user.
 
-    ```sh
-    useradd -s sbin/nologin user-name
-    ```
+   ```sh
+   useradd -s sbin/nologin user-name
+   ```
 
-    `-s`: for shell, with path of nologin shell
+   `-s`: for shell, with path of nologin shell
 
-3. To Verify the result you can either try to Cat or can try to login to that user.
-    
-    Using Cat:
+4. To Verify the result you can either try to Cat or can try to login to that user.
 
-    ```sh
-    cat /etc/passwd
-    ```
+   Using Cat:
 
-    Using login:
+   ```sh
+   cat /etc/passwd
+   ```
 
-    ```sh
-    su user-name
-    ```
+   Using login:
+
+   ```sh
+   su user-name
+   ```
 
 ## What I Learned
 
